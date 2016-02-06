@@ -157,7 +157,7 @@
                                 "value": "humidite"
                               },
                               "op2": {
-                                "type": "real",
+                                "type": "integer",
                                 "value": "30"
                               },
                               "op": "<"
@@ -198,7 +198,7 @@
                                 "value": "humidite"
                               },
                               "op2": {
-                                "type": "real",
+                                "type": "integer",
                                 "value": "70"
                               },
                               "op": ">"
