@@ -36,10 +36,10 @@
                     "value": "temperature"
                   },
                   "op2": {
-                    "type": "string",
-                    "value": ""
+                    "type": "integer",
+                    "value": "-50"
                   },
-                  "op": "=="
+                  "op": ">"
                 },
                 "children": [
                   {
