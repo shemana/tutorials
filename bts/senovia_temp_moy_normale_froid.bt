@@ -158,8 +158,8 @@
                                         },
                                         "properties": {
                                           "op1": {
-                                            "type": "boolean",
-                                            "value": "true"
+                                            "type": "entityKnowledge",
+                                            "value": "reponse"
                                           },
                                           "op2": {
                                             "type": "boolean",
@@ -254,8 +254,8 @@
                                                 },
                                                 "properties": {
                                                   "op1": {
-                                                    "type": "boolean",
-                                                    "value": "true"
+                                                    "type": "entityKnowledge",
+                                                    "value": "reponse"
                                                   },
                                                   "op2": {
                                                     "type": "boolean",
@@ -398,8 +398,8 @@
                                                                     },
                                                                     "properties": {
                                                                       "op1": {
-                                                                        "type": "boolean",
-                                                                        "value": "true"
+                                                                        "type": "entityKnowledge",
+                                                                        "value": "reponse"
                                                                       },
                                                                       "op2": {
                                                                         "type": "boolean",
