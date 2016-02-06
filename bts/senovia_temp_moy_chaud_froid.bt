@@ -8,7 +8,45 @@
       "label": ""
     },
     "properties": {},
-    "children": [],
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "info",
+              "inputParams": [
+                {
+                  "key": "info",
+                  "type": "string",
+                  "value": "A premiere vue, cet inconfort n'est ressenti que dans votre appartement. Essyons de regler le probleme ensemble."
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "question",
+                  "type": "entityKnowledge",
+                  "value": "Votre radiateur est-il ouvert à fond ?"
+                }
+              ]
+            },
+            "children": [],
+            "id": "13413327-39bb-481a-9bd6-20fb5c5be577",
+            "type": "action"
+          }
+        ],
+        "id": "71a880ff-cbdb-4195-be5b-7fe11b5b2e19",
+        "type": "sequence"
+      }
+    ],
     "id": "812470a5-762d-421a-a254-143bda0095e4"
   }
 ]
