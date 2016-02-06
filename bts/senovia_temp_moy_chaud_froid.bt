@@ -51,6 +51,44 @@
             "children": [],
             "id": "55db9644-91c5-4af7-8f4a-b4199761b8c5",
             "type": "embedded"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "ask",
+              "inputParams": [
+                {
+                  "key": "question",
+                  "type": "string",
+                  "value": ""
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "reponse",
+                  "type": "entityKnowledge",
+                  "value": "reponse"
+                }
+              ]
+            },
+            "children": [],
+            "id": "b2ba3726-15cc-45c6-9cb1-79736278e507",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [],
+            "id": "961295d3-b35f-48d4-bf35-3188792cf45f",
+            "type": "priority"
           }
         ],
         "id": "71a880ff-cbdb-4195-be5b-7fe11b5b2e19",
