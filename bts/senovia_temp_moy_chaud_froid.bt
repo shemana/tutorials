@@ -25,18 +25,12 @@
               "name": "info",
               "inputParams": [
                 {
-                  "key": "info",
+                  "key": "message",
                   "type": "string",
                   "value": "A premiere vue, cet inconfort n'est ressenti que dans votre appartement. Essyons de regler le probleme ensemble."
                 }
               ],
-              "outputParams": [
-                {
-                  "key": "question",
-                  "type": "entityKnowledge",
-                  "value": "Votre radiateur est-il ouvert à fond ?"
-                }
-              ]
+              "outputParams": []
             },
             "children": [],
             "id": "13413327-39bb-481a-9bd6-20fb5c5be577",
@@ -47,72 +41,16 @@
             "metadata": {
               "label": ""
             },
-            "properties": {},
-            "children": [
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
-                  "op1": {
-                    "type": "boolean",
-                    "value": "true"
-                  },
-                  "op2": {
-                    "type": "boolean",
-                    "value": "true"
-                  },
-                  "op": "=="
-                },
-                "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "info",
-                      "inputParams": [
-                        {
-                          "key": "info",
-                          "type": "string",
-                          "value": "Nous informons le technicien qu'il y a un probleme sur votre installation de chauffage. Nous vous tiendrons informé des qu'il sera intervenu."
-                        }
-                      ],
-                      "outputParams": []
-                    },
-                    "children": [],
-                    "id": "15e8c008-31d6-4773-b20a-31f22f98b188",
-                    "type": "action"
-                  }
-                ],
-                "id": "f32e86cb-17a3-41cf-a172-5129bc1b8de2",
-                "type": "condition"
+            "properties": {
+              "behavior": {
+                "type": "uriPath",
+                "value": "bts/senovia_temp_moy_normale_froid.bt"
               },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
-                  "name": "info",
-                  "inputParams": [
-                    {
-                      "key": "info",
-                      "type": "string",
-                      "value": "Coupez vos radiateurs pour réduire la puissance de chauffage chez vous."
-                    }
-                  ],
-                  "outputParams": []
-                },
-                "children": [],
-                "id": "3e3a20b7-04d5-4977-b2ab-314fe512997e",
-                "type": "action"
-              }
-            ],
-            "id": "ffffa624-c663-4055-a4bf-0024679c25cd",
-            "type": "sequence"
+              "inputParams": []
+            },
+            "children": [],
+            "id": "55db9644-91c5-4af7-8f4a-b4199761b8c5",
+            "type": "embedded"
           }
         ],
         "id": "71a880ff-cbdb-4195-be5b-7fe11b5b2e19",
