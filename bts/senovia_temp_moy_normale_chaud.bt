@@ -79,7 +79,7 @@
                 "properties": {
                   "op1": {
                     "type": "entityKnowledge",
-                    "value": "response"
+                    "value": "reponse"
                   },
                   "op2": {
                     "type": "boolean",
