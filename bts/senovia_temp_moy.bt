@@ -1,0 +1,602 @@
+[
+  {
+    "version": "1.2.0"
+  },
+  {
+    "activated": true,
+    "metadata": {
+      "label": ""
+    },
+    "properties": {},
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {
+          "active": "false"
+        },
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "temperaturemoyenne"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "20"
+              },
+              "op": "<"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "ask",
+                      "inputParams": [
+                        {
+                          "key": "question",
+                          "type": "string",
+                          "value": "Il semblerait bien que l'installation collective de chauffage rencontre un problème.<br> Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais.<br>En attendant, avez-vous ouvert à fond tous vos radiateurs ?"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "reponse",
+                          "type": "entityKnowledge",
+                          "value": "reponse"
+                        }
+                      ]
+                    },
+                    "children": [],
+                    "id": "65afa2c9-7921-4fc8-ae3e-9ae7a89b05af",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "reponse"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "true"
+                          },
+                          "op": "=="
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "message",
+                                  "type": "string",
+                                  "value": "Super ! Nous vous tiendrons informé des que l'exploitant sera intervenu."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "5e1ab462-5d7a-46c5-99ec-2afdbc6249dd",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "da45f5cc-89c0-4f55-8556-5f33f629bdc4",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "info",
+                          "inputParams": [
+                            {
+                              "key": "message",
+                              "type": "string",
+                              "value": "Nous vous conseillons de le faire. Nous vous tiendrons informé des que l'exploitant sera intervenu."
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "42b0040e-4a2b-432d-b608-23ca693a88de",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "a782889c-eb9c-4d31-9cc4-4cec1facc812",
+                    "type": "priority"
+                  }
+                ],
+                "id": "8832861d-55b4-4d0d-942e-8aa8d07c119e",
+                "type": "sequence"
+              }
+            ],
+            "id": "b7ca92f0-bce8-4257-abc0-b7ab0475e025",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "op1": {
+                "type": "entityKnowledge",
+                "value": "temperaturemoyenne"
+              },
+              "op2": {
+                "type": "integer",
+                "value": "22"
+              },
+              "op": ">"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "temperature moyenne entre 20 et 22 degre"
+                },
+                "properties": {
+                  "active": "false"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "temperature > 22"
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "behaviorParams",
+                        "value": "temperature"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [],
+                    "id": "388567c1-222f-4eb5-a308-1e5da107a1fe",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "temperature < 20"
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "behaviorParams",
+                        "value": "temperature"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "-1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [],
+                    "id": "c11285a1-87f1-484a-83a0-93d1be5be94a",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Question chaud ou froid ou bien?"
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "ask",
+                          "inputParams": [
+                            {
+                              "key": "question",
+                              "type": "string",
+                              "value": "Avez vous chaud ?"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "reponse",
+                              "type": "entityKnowledge",
+                              "value": "reponse"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "6d09c2b0-4837-4d2d-9b53-8ae32964b532",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "chaud"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "reponse"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op": "=="
+                            },
+                            "children": [],
+                            "id": "3c0dc51d-f356-426b-8ab9-8ea606549dff",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Avez vous froid?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "reponse"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "c0651539-d170-46a4-8390-2246600764b8",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": "froid"
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op2": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op": "=="
+                                },
+                                "children": [],
+                                "id": "1908150b-18cb-48db-a9a4-9b79e126f84a",
+                                "type": "condition"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": "ni trop chaud ni trop froid"
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Ok."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "fcd236b5-fc7d-4b6d-b2b4-aaa6f6739da7",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "be4f151d-c84c-4843-9e06-4cd3c33a49ee",
+                            "type": "priority"
+                          }
+                        ],
+                        "id": "e6b6f209-ea75-47e1-a1dd-9d3af8976578",
+                        "type": "priority"
+                      }
+                    ],
+                    "id": "e6b5c43d-98a5-4f12-991d-dabfc307e438",
+                    "type": "sequence"
+                  }
+                ],
+                "id": "bf1920ce-5f93-4062-b24c-aeb8dd78d1c2",
+                "type": "priority"
+              }
+            ],
+            "id": "33425124-8afb-4825-a32a-327919b289f1",
+            "type": "condition"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": "temperature moyenne entre 20 et 22 degre"
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "temperature > 22"
+                },
+                "properties": {
+                  "op1": {
+                    "type": "behaviorParams",
+                    "value": "temperature"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "1"
+                  },
+                  "op": "=="
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "behavior": {
+                        "type": "uriPath",
+                        "value": "bts/senovia_temp_moy_normal_chaud.bt"
+                      },
+                      "inputParams": []
+                    },
+                    "children": [],
+                    "id": "83553337-bcf6-4df6-9298-8bcf8889b54b",
+                    "type": "embedded"
+                  }
+                ],
+                "id": "ef7e315a-2dac-40f6-9d42-f3ade1a5993c",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "temperature < 20"
+                },
+                "properties": {
+                  "op1": {
+                    "type": "behaviorParams",
+                    "value": "temperature"
+                  },
+                  "op2": {
+                    "type": "integer",
+                    "value": "-1"
+                  },
+                  "op": "=="
+                },
+                "children": [],
+                "id": "c98bf87e-5ebe-489e-b085-65a9a14b2205",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "Question chaud ou froid ou bien?"
+                },
+                "properties": {},
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "name": "ask",
+                      "inputParams": [
+                        {
+                          "key": "question",
+                          "type": "string",
+                          "value": "Avez vous chaud ?"
+                        }
+                      ],
+                      "outputParams": [
+                        {
+                          "key": "reponse",
+                          "type": "entityKnowledge",
+                          "value": "reponse"
+                        }
+                      ]
+                    },
+                    "children": [],
+                    "id": "b98fa047-6501-48dd-85c2-a02a157c684a",
+                    "type": "action"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "chaud"
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "reponse"
+                          },
+                          "op2": {
+                            "type": "boolean",
+                            "value": "true"
+                          },
+                          "op": "=="
+                        },
+                        "children": [],
+                        "id": "090c4522-3d37-4dd5-936d-53cc6021e87a",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "ask",
+                          "inputParams": [
+                            {
+                              "key": "question",
+                              "type": "string",
+                              "value": "Avez vous froid?"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "reponse",
+                              "type": "entityKnowledge",
+                              "value": "reponse"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "7d2ce309-f207-4fd0-940a-23c365f3e848",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "froid"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op": "=="
+                            },
+                            "children": [],
+                            "id": "0997b7da-9d05-424c-9f96-a675d5eeec4e",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "ni trop chaud ni trop froid"
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "message",
+                                  "type": "string",
+                                  "value": "Ok."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "d1d9b59c-55cd-4ab6-9dd4-49f43de83d57",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "19b1570c-a9c6-4788-ae91-68f30435fd4b",
+                        "type": "priority"
+                      }
+                    ],
+                    "id": "15262710-a49b-4973-846b-e9d4a7b1e128",
+                    "type": "priority"
+                  }
+                ],
+                "id": "a36494a3-f6e5-4b88-bc54-8ad4d6ee2da3",
+                "type": "sequence"
+              }
+            ],
+            "id": "5699f7c2-efe0-432e-b15d-2ed65b46e5e0",
+            "type": "priority"
+          }
+        ],
+        "id": "3981b0b3-8d5d-467c-9871-553dd1ef8d40",
+        "type": "priority"
+      }
+    ],
+    "id": "e980860f-3929-465d-a1b0-f5406f1a2c6b"
+  }
+]

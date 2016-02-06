@@ -36,163 +36,12 @@
                     "value": "temperature"
                   },
                   "op2": {
-                    "type": "real",
-                    "value": "20"
-                  },
-                  "op": "<"
-                },
-                "children": [],
-                "id": "e9ad388a-84e9-4f7f-81cb-d095fbea2024",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": ""
-                },
-                "properties": {
-                  "op1": {
-                    "type": "entityKnowledge",
-                    "value": "temperature"
-                  },
-                  "op2": {
-                    "type": "real",
-                    "value": "22"
+                    "type": "integer",
+                    "value": "-50"
                   },
                   "op": ">"
                 },
-                "children": [],
-                "id": "d51ef2de-a93d-4e9a-9ed7-85854bba9d0e",
-                "type": "condition"
-              },
-              {
-                "activated": true,
-                "metadata": {
-                  "label": "temperature entre 20 et 22 degres"
-                },
-                "properties": {
-                  "active": "false"
-                },
                 "children": [
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "humidite"
-                      },
-                      "op2": {
-                        "type": "real",
-                        "value": "30"
-                      },
-                      "op": "<"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {
-                          "name": "info",
-                          "inputParams": [
-                            {
-                              "key": "message",
-                              "type": "string",
-                              "value": "Vous avez un air trop sec pour etre confortable. Nous vous conseilons d'installer des solutions pour humidifier votre air interieur."
-                            }
-                          ],
-                          "outputParams": []
-                        },
-                        "children": [],
-                        "id": "dcb4a76f-dcb7-4abb-8cb6-78b0e51595be",
-                        "type": "action"
-                      }
-                    ],
-                    "id": "cf64f6cb-39b9-4055-829d-4ead61e58474",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "op1": {
-                        "type": "entityKnowledge",
-                        "value": "humidite"
-                      },
-                      "op2": {
-                        "type": "real",
-                        "value": "70"
-                      },
-                      "op": ">"
-                    },
-                    "children": [
-                      {
-                        "activated": true,
-                        "metadata": {
-                          "label": ""
-                        },
-                        "properties": {},
-                        "children": [
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "info",
-                              "inputParams": [
-                                {
-                                  "key": "message",
-                                  "type": "string",
-                                  "value": "Nous detectons une forte humidite dans votre logement, cause de votre inconfort."
-                                }
-                              ],
-                              "outputParams": []
-                            },
-                            "children": [],
-                            "id": "425a914b-c788-475e-af31-7f6111676521",
-                            "type": "action"
-                          },
-                          {
-                            "activated": true,
-                            "metadata": {
-                              "label": ""
-                            },
-                            "properties": {
-                              "name": "ask",
-                              "inputParams": [
-                                {
-                                  "key": "question",
-                                  "type": "string",
-                                  "value": "Etes-vous bien habillé ?"
-                                }
-                              ],
-                              "outputParams": [
-                                {
-                                  "key": "reponse",
-                                  "type": "entityKnowledge",
-                                  "value": "response"
-                                }
-                              ]
-                            },
-                            "children": [],
-                            "id": "466f5023-3742-4582-b87c-cf97a7cedcba",
-                            "type": "action"
-                          }
-                        ],
-                        "id": "d4c2e29e-5546-46dc-8def-a7be5652e16e",
-                        "type": "sequence"
-                      }
-                    ],
-                    "id": "31c33251-213b-4e30-a3fc-656bf6a29dae",
-                    "type": "condition"
-                  },
                   {
                     "activated": true,
                     "metadata": {
@@ -207,7 +56,17 @@
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {},
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "temperature"
+                          },
+                          "op2": {
+                            "type": "integer",
+                            "value": "20"
+                          },
+                          "op": "<"
+                        },
                         "children": [
                           {
                             "activated": true,
@@ -215,25 +74,118 @@
                               "label": ""
                             },
                             "properties": {
-                              "name": "ask",
+                              "behavior": {
+                                "type": "uriPath",
+                                "value": "bts/senovia_temp_moy.bt"
+                              },
                               "inputParams": [
                                 {
-                                  "key": "question",
-                                  "type": "string",
-                                  "value": "Etes-vous bien habillé ?"
-                                }
-                              ],
-                              "outputParams": [
-                                {
-                                  "key": "reponse",
-                                  "type": "entityKnowledge",
-                                  "value": "response"
+                                  "key": "temperature",
+                                  "type": "integer",
+                                  "value": "-1"
                                 }
                               ]
                             },
                             "children": [],
-                            "id": "e52e6062-eabd-4557-890c-5f4c51f7c16e",
-                            "type": "action"
+                            "id": "d6c3a399-6696-401e-be02-5600ca178808",
+                            "type": "embedded"
+                          }
+                        ],
+                        "id": "e9ad388a-84e9-4f7f-81cb-d095fbea2024",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "op1": {
+                            "type": "entityKnowledge",
+                            "value": "temperature"
+                          },
+                          "op2": {
+                            "type": "integer",
+                            "value": "22"
+                          },
+                          "op": ">"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "behavior": {
+                                "type": "uriPath",
+                                "value": "bts/senovia_temp_moy.bt"
+                              },
+                              "inputParams": [
+                                {
+                                  "key": "temperature",
+                                  "type": "integer",
+                                  "value": "1"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "23ff7717-932d-4be0-842b-e02e231cd11a",
+                            "type": "embedded"
+                          }
+                        ],
+                        "id": "d51ef2de-a93d-4e9a-9ed7-85854bba9d0e",
+                        "type": "condition"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": "temperature entre 20 et 22 degres"
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "humidite"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "30"
+                              },
+                              "op": "<"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Vous avez un air trop sec pour etre confortable. Nous vous conseilons d'installer des solutions pour humidifier votre air interieur."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "dcb4a76f-dcb7-4abb-8cb6-78b0e51595be",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "cf64f6cb-39b9-4055-829d-4ead61e58474",
+                            "type": "condition"
                           },
                           {
                             "activated": true,
@@ -241,25 +193,151 @@
                               "label": ""
                             },
                             "properties": {
-                              "name": "ask",
-                              "inputParams": [
-                                {
-                                  "key": "question",
-                                  "type": "string",
-                                  "value": "Etes-vous bien habillé ?"
-                                }
-                              ],
-                              "outputParams": [
-                                {
-                                  "key": "reponse",
-                                  "type": "entityKnowledge",
-                                  "value": "response"
-                                }
-                              ]
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "humidite"
+                              },
+                              "op2": {
+                                "type": "integer",
+                                "value": "70"
+                              },
+                              "op": ">"
                             },
-                            "children": [],
-                            "id": "17d9a372-e1b5-4752-8e90-370ba695bd03",
-                            "type": "action"
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "info",
+                                      "inputParams": [
+                                        {
+                                          "key": "message",
+                                          "type": "string",
+                                          "value": "Nous detectons une forte humidite dans votre logement, cause de votre inconfort."
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "425a914b-c788-475e-af31-7f6111676521",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "ask",
+                                      "inputParams": [
+                                        {
+                                          "key": "question",
+                                          "type": "string",
+                                          "value": "Les bouches d'aeration et d ventilation sont-elles obstruées ?"
+                                        }
+                                      ],
+                                      "outputParams": [
+                                        {
+                                          "key": "reponse",
+                                          "type": "entityKnowledge",
+                                          "value": "reponse"
+                                        }
+                                      ]
+                                    },
+                                    "children": [],
+                                    "id": "466f5023-3742-4582-b87c-cf97a7cedcba",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "active": "false"
+                                    },
+                                    "children": [
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "op1": {
+                                            "type": "entityKnowledge",
+                                            "value": "reponse"
+                                          },
+                                          "op2": {
+                                            "type": "boolean",
+                                            "value": "true"
+                                          },
+                                          "op": "=="
+                                        },
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "info",
+                                              "inputParams": [
+                                                {
+                                                  "key": "message",
+                                                  "type": "string",
+                                                  "value": "Si vous bouchez vos bouches d'aeration, l'air ne peut se renouveller et l'humidite s'accumule dans votre appartement. En plus d'etre inconfortable, ce n'est pas bon pour votre santé. Nous vous conseillons de deboucher les obstruations et d'aerer votre appartement 1 minutes par jours. "
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "e97f4291-e303-43a5-96fb-ac265f4f8459",
+                                            "type": "action"
+                                          }
+                                        ],
+                                        "id": "747890e1-e549-4529-a402-9d17cc0348e8",
+                                        "type": "condition"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "info",
+                                          "inputParams": [
+                                            {
+                                              "key": "message",
+                                              "type": "string",
+                                              "value": "Nous informons letechnicien que la ventillation de votre appartement semble dysfonctionner. En attendant son intervention aerez votre logement 10 minutes par jour."
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "ca279208-3269-4ede-834f-230f26f510a3",
+                                        "type": "action"
+                                      }
+                                    ],
+                                    "id": "2becb75e-db6d-4eef-8956-e3bd5bec0618",
+                                    "type": "priority"
+                                  }
+                                ],
+                                "id": "d4c2e29e-5546-46dc-8def-a7be5652e16e",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "31c33251-213b-4e30-a3fc-656bf6a29dae",
+                            "type": "condition"
                           },
                           {
                             "activated": true,
@@ -275,24 +353,42 @@
                                 "metadata": {
                                   "label": ""
                                 },
-                                "properties": {
-                                  "op1": {
-                                    "type": "entityKnowledge",
-                                    "value": "reponse"
-                                  },
-                                  "op2": {
-                                    "type": "boolean",
-                                    "value": "true"
-                                  },
-                                  "op": "=="
-                                },
+                                "properties": {},
                                 "children": [
                                   {
                                     "activated": true,
                                     "metadata": {
                                       "label": ""
                                     },
-                                    "properties": {},
+                                    "properties": {
+                                      "name": "ask",
+                                      "inputParams": [
+                                        {
+                                          "key": "question",
+                                          "type": "string",
+                                          "value": "Etes-vous bien habillé ?"
+                                        }
+                                      ],
+                                      "outputParams": [
+                                        {
+                                          "key": "reponse",
+                                          "type": "entityKnowledge",
+                                          "value": "reponse"
+                                        }
+                                      ]
+                                    },
+                                    "children": [],
+                                    "id": "17d9a372-e1b5-4752-8e90-370ba695bd03",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "active": "false"
+                                    },
                                     "children": [
                                       {
                                         "activated": true,
@@ -300,33 +396,15 @@
                                           "label": ""
                                         },
                                         "properties": {
-                                          "name": "ask",
-                                          "inputParams": [
-                                            {
-                                              "key": "question",
-                                              "type": "string",
-                                              "value": "Etes-vous malade ?"
-                                            }
-                                          ],
-                                          "outputParams": [
-                                            {
-                                              "key": "reponse",
-                                              "type": "entityKnowledge",
-                                              "value": "response"
-                                            }
-                                          ]
-                                        },
-                                        "children": [],
-                                        "id": "1f4c1829-60aa-40b4-abd4-9391b05b6433",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
-                                        "properties": {
-                                          "active": "false"
+                                          "op1": {
+                                            "type": "entityKnowledge",
+                                            "value": "reponse"
+                                          },
+                                          "op2": {
+                                            "type": "boolean",
+                                            "value": "true"
+                                          },
+                                          "op": "=="
                                         },
                                         "children": [
                                           {
@@ -334,17 +412,7 @@
                                             "metadata": {
                                               "label": ""
                                             },
-                                            "properties": {
-                                              "op1": {
-                                                "type": "entityKnowledge",
-                                                "value": "reponse"
-                                              },
-                                              "op2": {
-                                                "type": "boolean",
-                                                "value": "true"
-                                              },
-                                              "op": "=="
-                                            },
+                                            "properties": {},
                                             "children": [
                                               {
                                                 "activated": true,
@@ -352,94 +420,176 @@
                                                   "label": ""
                                                 },
                                                 "properties": {
-                                                  "name": "info",
+                                                  "name": "ask",
                                                   "inputParams": [
                                                     {
-                                                      "key": "message",
+                                                      "key": "question",
                                                       "type": "string",
-                                                      "value": "Soignez vous !"
+                                                      "value": "Etes-vous malade ?"
                                                     }
                                                   ],
-                                                  "outputParams": []
+                                                  "outputParams": [
+                                                    {
+                                                      "key": "reponse",
+                                                      "type": "entityKnowledge",
+                                                      "value": "reponse"
+                                                    }
+                                                  ]
                                                 },
                                                 "children": [],
-                                                "id": "63b1780a-1d81-437a-a22f-55a63aa7187a",
+                                                "id": "1f4c1829-60aa-40b4-abd4-9391b05b6433",
                                                 "type": "action"
+                                              },
+                                              {
+                                                "activated": true,
+                                                "metadata": {
+                                                  "label": ""
+                                                },
+                                                "properties": {
+                                                  "active": "false"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "activated": true,
+                                                    "metadata": {
+                                                      "label": ""
+                                                    },
+                                                    "properties": {
+                                                      "op1": {
+                                                        "type": "entityKnowledge",
+                                                        "value": "reponse"
+                                                      },
+                                                      "op2": {
+                                                        "type": "boolean",
+                                                        "value": "true"
+                                                      },
+                                                      "op": "=="
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "activated": true,
+                                                        "metadata": {
+                                                          "label": ""
+                                                        },
+                                                        "properties": {
+                                                          "name": "info",
+                                                          "inputParams": [
+                                                            {
+                                                              "key": "message",
+                                                              "type": "string",
+                                                              "value": "Soignez vous !"
+                                                            }
+                                                          ],
+                                                          "outputParams": []
+                                                        },
+                                                        "children": [],
+                                                        "id": "63b1780a-1d81-437a-a22f-55a63aa7187a",
+                                                        "type": "action"
+                                                      }
+                                                    ],
+                                                    "id": "5e112588-baa8-48c7-a0c0-52268a555188",
+                                                    "type": "condition"
+                                                  },
+                                                  {
+                                                    "activated": true,
+                                                    "metadata": {
+                                                      "label": ""
+                                                    },
+                                                    "properties": {
+                                                      "name": "info",
+                                                      "inputParams": [
+                                                        {
+                                                          "key": "message",
+                                                          "type": "string",
+                                                          "value": "Nous ne connaissons pas le probleme ."
+                                                        }
+                                                      ],
+                                                      "outputParams": []
+                                                    },
+                                                    "children": [],
+                                                    "id": "eca5f699-d046-4458-9c2f-59afdb2cb08b",
+                                                    "type": "action"
+                                                  }
+                                                ],
+                                                "id": "1d840193-eab7-4acc-8ce3-7eecfcfb4154",
+                                                "type": "priority"
                                               }
                                             ],
-                                            "id": "5e112588-baa8-48c7-a0c0-52268a555188",
-                                            "type": "condition"
-                                          },
-                                          {
-                                            "activated": true,
-                                            "metadata": {
-                                              "label": ""
-                                            },
-                                            "properties": {
-                                              "name": "info",
-                                              "inputParams": [
-                                                {
-                                                  "key": "message",
-                                                  "type": "string",
-                                                  "value": "Nous ne connaissons pas le probleme ."
-                                                }
-                                              ],
-                                              "outputParams": []
-                                            },
-                                            "children": [],
-                                            "id": "eca5f699-d046-4458-9c2f-59afdb2cb08b",
-                                            "type": "action"
+                                            "id": "f9a9a62f-89a7-402d-b11a-fa56ffad6437",
+                                            "type": "sequence"
                                           }
                                         ],
-                                        "id": "1d840193-eab7-4acc-8ce3-7eecfcfb4154",
-                                        "type": "priority"
+                                        "id": "62df42a4-4832-46fe-b70b-24503638f919",
+                                        "type": "condition"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "info",
+                                          "inputParams": [
+                                            {
+                                              "key": "message",
+                                              "type": "string",
+                                              "value": "Habillez-vous, vous aller tomber malade ."
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "7c56d72a-0c5c-4b42-9230-0ddcec7e5c9a",
+                                        "type": "action"
                                       }
                                     ],
-                                    "id": "f9a9a62f-89a7-402d-b11a-fa56ffad6437",
-                                    "type": "sequence"
+                                    "id": "06cce02f-f447-453f-af1f-b123f00a9c16",
+                                    "type": "priority"
                                   }
                                 ],
-                                "id": "62df42a4-4832-46fe-b70b-24503638f919",
-                                "type": "condition"
-                              },
-                              {
-                                "activated": true,
-                                "metadata": {
-                                  "label": ""
-                                },
-                                "properties": {
-                                  "name": "info",
-                                  "inputParams": [
-                                    {
-                                      "key": "message",
-                                      "type": "string",
-                                      "value": "Habillez-vous, vous aller tomber malade ."
-                                    }
-                                  ],
-                                  "outputParams": []
-                                },
-                                "children": [],
-                                "id": "7c56d72a-0c5c-4b42-9230-0ddcec7e5c9a",
-                                "type": "action"
+                                "id": "4d50580f-ae6b-4a3a-a8dc-2d0bf8cd860f",
+                                "type": "sequence"
                               }
                             ],
-                            "id": "06cce02f-f447-453f-af1f-b123f00a9c16",
+                            "id": "3fd463b8-e29d-430a-920e-6e2824cf9165",
                             "type": "priority"
                           }
                         ],
-                        "id": "4d50580f-ae6b-4a3a-a8dc-2d0bf8cd860f",
-                        "type": "sequence"
+                        "id": "d9ff079e-0982-4ddd-93fa-783dcc5eed85",
+                        "type": "priority"
                       }
                     ],
-                    "id": "3fd463b8-e29d-430a-920e-6e2824cf9165",
+                    "id": "de5144a4-6076-490a-b88d-3645f6168119",
                     "type": "priority"
                   }
                 ],
-                "id": "d9ff079e-0982-4ddd-93fa-783dcc5eed85",
-                "type": "priority"
+                "id": "77a5c7fc-9c6e-4af6-9b50-a3e3b559e55f",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "behavior": {
+                    "type": "uriPath",
+                    "value": "bts/senovia_temp_moy.bt"
+                  },
+                  "inputParams": [
+                    {
+                      "key": "temperature",
+                      "type": "integer",
+                      "value": "0"
+                    }
+                  ]
+                },
+                "children": [],
+                "id": "ab295885-1aa4-46d8-a5d2-997a6a2cae3c",
+                "type": "embedded"
               }
             ],
-            "id": "de5144a4-6076-490a-b88d-3645f6168119",
+            "id": "5cd801bc-96de-4c0e-afe9-c5bfa23500bc",
             "type": "priority"
           }
         ],

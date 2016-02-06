@@ -1,0 +1,237 @@
+[
+  {
+    "version": "1.2.0"
+  },
+  {
+    "activated": true,
+    "metadata": {
+      "label": ""
+    },
+    "properties": {},
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "info",
+              "inputParams": [
+                {
+                  "key": "message",
+                  "type": "string",
+                  "value": "A premiere vue, cet inconfort n'est ressenti que dns votre apprtement. Essayons de regler le probleme ensemble."
+                }
+              ],
+              "outputParams": []
+            },
+            "children": [],
+            "id": "35c04677-0b0e-4c60-b70c-4e87337f592d",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "ask",
+              "inputParams": [
+                {
+                  "key": "question",
+                  "type": "string",
+                  "value": "Vos radiateurs sont-ils coupés ?"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "reponse",
+                  "type": "entityKnowledge",
+                  "value": "reponse"
+                }
+              ]
+            },
+            "children": [],
+            "id": "473e2795-1ad9-4013-bdce-6f66399dd91e",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "reponse"
+                  },
+                  "op2": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op": "=="
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "ask",
+                          "inputParams": [
+                            {
+                              "key": "question",
+                              "type": "string",
+                              "value": "Vos radiateurs sont-ils froid ?"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "reponse",
+                              "type": "entityKnowledge",
+                              "value": "reponse"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "b0ab44dd-200b-4141-b9cc-4d6977f49107",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "entityKnowledge",
+                                "value": "reponse"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op": "=="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Nous informons le technicien qu'il y a un probleme sur votre installation de chauffage. Nous vous tiendrons informé des qu'il sera intervenu."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "0919a1d2-ed7b-4a42-8d2a-e57579305144",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "f3ea31a7-bad3-4815-a881-5f1dd853f225",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "message",
+                                  "type": "string",
+                                  "value": "Patientez que les radiateurs refroidisse, la prochaine fois pensez à reduire la puissance de chauffage."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "e0a4c8b9-5634-4fce-b23b-79c451f17dd9",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "5010f49a-aaa0-46f9-9858-61155a5645df",
+                        "type": "priority"
+                      }
+                    ],
+                    "id": "ddd19502-3e28-4396-add8-af7bce34ecaf",
+                    "type": "sequence"
+                  }
+                ],
+                "id": "710af4a9-72b2-4fc6-9e2f-6fd6a26221e5",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "name": "info",
+                  "inputParams": [
+                    {
+                      "key": "message",
+                      "type": "string",
+                      "value": "Coupez vos radiateurs pour reduire la puissance de chauffage chez vous."
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "dc63c29b-9b40-46ee-aa10-c8b341f9f4b4",
+                "type": "action"
+              }
+            ],
+            "id": "90e2341b-3b37-4e91-a6ed-d2078cd7301d",
+            "type": "priority"
+          }
+        ],
+        "id": "35e54863-3b0d-47fa-ac5a-00c822a6cd49",
+        "type": "sequence"
+      }
+    ],
+    "id": "b985e21d-b670-4a8c-b7fd-0b13e3bb1468"
+  }
+]
