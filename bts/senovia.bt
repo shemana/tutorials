@@ -249,7 +249,7 @@
                                         {
                                           "key": "reponse",
                                           "type": "entityKnowledge",
-                                          "value": "response"
+                                          "value": "reponse"
                                         }
                                       ]
                                     },
@@ -373,33 +373,7 @@
                                         {
                                           "key": "reponse",
                                           "type": "entityKnowledge",
-                                          "value": "response"
-                                        }
-                                      ]
-                                    },
-                                    "children": [],
-                                    "id": "e52e6062-eabd-4557-890c-5f4c51f7c16e",
-                                    "type": "action"
-                                  },
-                                  {
-                                    "activated": true,
-                                    "metadata": {
-                                      "label": ""
-                                    },
-                                    "properties": {
-                                      "name": "ask",
-                                      "inputParams": [
-                                        {
-                                          "key": "question",
-                                          "type": "string",
-                                          "value": "Etes-vous bien habillé ?"
-                                        }
-                                      ],
-                                      "outputParams": [
-                                        {
-                                          "key": "reponse",
-                                          "type": "entityKnowledge",
-                                          "value": "response"
+                                          "value": "reponse"
                                         }
                                       ]
                                     },
@@ -458,7 +432,7 @@
                                                     {
                                                       "key": "reponse",
                                                       "type": "entityKnowledge",
-                                                      "value": "response"
+                                                      "value": "reponse"
                                                     }
                                                   ]
                                                 },
