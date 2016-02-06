@@ -29,7 +29,7 @@
                 "value": "temperaturemoyenne"
               },
               "op2": {
-                "type": "real",
+                "type": "integer",
                 "value": "20"
               },
               "op": "<"
@@ -161,7 +161,7 @@
                 "value": "temperaturemoyenne"
               },
               "op2": {
-                "type": "real",
+                "type": "integer",
                 "value": "22"
               },
               "op": ">"
