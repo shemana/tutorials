@@ -197,25 +197,6 @@
                                         "metadata": {
                                           "label": ""
                                         },
-                                        "properties": {
-                                          "name": "",
-                                          "inputParams": [
-                                            {
-                                              "type": "string",
-                                              "value": ""
-                                            }
-                                          ],
-                                          "outputParams": []
-                                        },
-                                        "children": [],
-                                        "id": "9281f033-9c09-4d2f-ac70-053694cf351b",
-                                        "type": "action"
-                                      },
-                                      {
-                                        "activated": true,
-                                        "metadata": {
-                                          "label": ""
-                                        },
                                         "properties": {},
                                         "children": [
                                           {
@@ -287,20 +268,6 @@
                                                 ],
                                                 "id": "2ff1a897-ec16-4777-b238-3212f6aa9c1a",
                                                 "type": "condition"
-                                              },
-                                              {
-                                                "activated": true,
-                                                "metadata": {
-                                                  "label": ""
-                                                },
-                                                "properties": {
-                                                  "name": "",
-                                                  "inputParams": [],
-                                                  "outputParams": []
-                                                },
-                                                "children": [],
-                                                "id": "2039a714-de9b-4e64-bec8-67189fd1395d",
-                                                "type": "action"
                                               },
                                               {
                                                 "activated": true,
@@ -470,8 +437,14 @@
                                                           "label": ""
                                                         },
                                                         "properties": {
-                                                          "name": "",
-                                                          "inputParams": [],
+                                                          "name": "info",
+                                                          "inputParams": [
+                                                            {
+                                                              "key": "info",
+                                                              "type": "string",
+                                                              "value": "Habillez-vous correctement car la temperature est tres basse en ce moment et vous risquez de tomber malade."
+                                                            }
+                                                          ],
                                                           "outputParams": []
                                                         },
                                                         "children": [],
