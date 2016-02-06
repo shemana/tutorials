@@ -22,13 +22,545 @@
               "label": ""
             },
             "properties": {
-              "name": "",
-              "inputParams": [],
+              "name": "info",
+              "inputParams": [
+                {
+                  "key": "info",
+                  "type": "string",
+                  "value": "A premiere vue, cet inconfort n'est ressenti que dans votre appartement. Essayons de regler le probleme ensemble."
+                }
+              ],
               "outputParams": []
             },
             "children": [],
             "id": "d5dbf08e-ab45-4f94-8a37-49c06930ad6b",
             "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "reponse"
+                  },
+                  "op2": {
+                    "type": "boolean",
+                    "value": "true"
+                  },
+                  "op": "=="
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "ask",
+                          "inputParams": [
+                            {
+                              "key": "ask",
+                              "type": "string",
+                              "value": "Votre radiateur est-il ouvert à fond ?"
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "4f9fa7ab-5ff4-4972-805a-ad9e5dad84b2",
+                        "type": "action"
+                      },
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "active": "false"
+                        },
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op": "=="
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {},
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "ask",
+                                      "inputParams": [
+                                        {
+                                          "key": "ask",
+                                          "type": "string",
+                                          "value": "Les bouches d’aération ou de ventilation sont-elles obstruées ?"
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "c49a213f-20b5-4f04-bab0-179ebef8acee",
+                                    "type": "action"
+                                  },
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "active": "false"
+                                    },
+                                    "children": [
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "op1": {
+                                            "type": "boolean",
+                                            "value": "true"
+                                          },
+                                          "op2": {
+                                            "type": "boolean",
+                                            "value": "true"
+                                          },
+                                          "op": "=="
+                                        },
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "info",
+                                              "inputParams": [
+                                                {
+                                                  "key": "info",
+                                                  "type": "string",
+                                                  "value": "Si vous bouchez vos bouches d'aeration, l'air ne peut se rnouveler et l'humidité s'accumule dans votre appartement. En plus d'etre inconfortable, ce n'est pas bon pour votre santé. Nous vous conseillons de deboucher les obstruations et d'aerer votre appartement 10 minutes par jours."
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "3bf9022a-3b1b-4381-a31f-e304dc489498",
+                                            "type": "action"
+                                          }
+                                        ],
+                                        "id": "b6264019-1b7c-4e62-8af5-9b3269fd6e0c",
+                                        "type": "condition"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "",
+                                          "inputParams": [
+                                            {
+                                              "type": "string",
+                                              "value": ""
+                                            }
+                                          ],
+                                          "outputParams": []
+                                        },
+                                        "children": [],
+                                        "id": "9281f033-9c09-4d2f-ac70-053694cf351b",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {},
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "ask",
+                                              "inputParams": [
+                                                {
+                                                  "key": "ask",
+                                                  "type": "string",
+                                                  "value": "Avez-vous remplacé un ou plusieurs radiateurs dans l'appartement ?"
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "2c03e801-3bf1-4254-90e9-e9183866988b",
+                                            "type": "action"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "active": "false"
+                                            },
+                                            "children": [
+                                              {
+                                                "activated": true,
+                                                "metadata": {
+                                                  "label": ""
+                                                },
+                                                "properties": {
+                                                  "op1": {
+                                                    "type": "boolean",
+                                                    "value": "true"
+                                                  },
+                                                  "op2": {
+                                                    "type": "boolean",
+                                                    "value": "true"
+                                                  },
+                                                  "op": "=="
+                                                },
+                                                "children": [
+                                                  {
+                                                    "activated": true,
+                                                    "metadata": {
+                                                      "label": ""
+                                                    },
+                                                    "properties": {
+                                                      "name": "info",
+                                                      "inputParams": [
+                                                        {
+                                                          "key": "info",
+                                                          "type": "string",
+                                                          "value": "Nous informons le technicien qu'il y a un problème sur votre installation de chauffage. Il vous recontactera le plus rapidement possible pour le résoudre."
+                                                        }
+                                                      ],
+                                                      "outputParams": []
+                                                    },
+                                                    "children": [],
+                                                    "id": "622b043f-b1d5-4228-90e5-d4bd9cd0d99d",
+                                                    "type": "action"
+                                                  }
+                                                ],
+                                                "id": "2ff1a897-ec16-4777-b238-3212f6aa9c1a",
+                                                "type": "condition"
+                                              },
+                                              {
+                                                "activated": true,
+                                                "metadata": {
+                                                  "label": ""
+                                                },
+                                                "properties": {
+                                                  "name": "",
+                                                  "inputParams": [],
+                                                  "outputParams": []
+                                                },
+                                                "children": [],
+                                                "id": "2039a714-de9b-4e64-bec8-67189fd1395d",
+                                                "type": "action"
+                                              },
+                                              {
+                                                "activated": true,
+                                                "metadata": {
+                                                  "label": ""
+                                                },
+                                                "properties": {},
+                                                "children": [
+                                                  {
+                                                    "activated": true,
+                                                    "metadata": {
+                                                      "label": ""
+                                                    },
+                                                    "properties": {
+                                                      "name": "ask",
+                                                      "inputParams": [
+                                                        {
+                                                          "key": "ask",
+                                                          "type": "string",
+                                                          "value": "Etes-vous bien habillé ?"
+                                                        }
+                                                      ],
+                                                      "outputParams": []
+                                                    },
+                                                    "children": [],
+                                                    "id": "27fac5ab-0050-4309-9e5e-0736815c0d30",
+                                                    "type": "action"
+                                                  },
+                                                  {
+                                                    "activated": true,
+                                                    "metadata": {
+                                                      "label": ""
+                                                    },
+                                                    "properties": {
+                                                      "active": "false"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "activated": true,
+                                                        "metadata": {
+                                                          "label": ""
+                                                        },
+                                                        "properties": {
+                                                          "op1": {
+                                                            "type": "boolean",
+                                                            "value": "true"
+                                                          },
+                                                          "op2": {
+                                                            "type": "boolean",
+                                                            "value": "true"
+                                                          },
+                                                          "op": "=="
+                                                        },
+                                                        "children": [
+                                                          {
+                                                            "activated": true,
+                                                            "metadata": {
+                                                              "label": ""
+                                                            },
+                                                            "properties": {},
+                                                            "children": [
+                                                              {
+                                                                "activated": true,
+                                                                "metadata": {
+                                                                  "label": ""
+                                                                },
+                                                                "properties": {
+                                                                  "name": "ask",
+                                                                  "inputParams": [
+                                                                    {
+                                                                      "key": "ask",
+                                                                      "type": "string",
+                                                                      "value": "Etes-vous malade ou fiévreux ?"
+                                                                    }
+                                                                  ],
+                                                                  "outputParams": []
+                                                                },
+                                                                "children": [],
+                                                                "id": "1d2ea7bc-6cf3-43f4-862d-63b129a171fb",
+                                                                "type": "action"
+                                                              },
+                                                              {
+                                                                "activated": true,
+                                                                "metadata": {
+                                                                  "label": ""
+                                                                },
+                                                                "properties": {
+                                                                  "active": "false"
+                                                                },
+                                                                "children": [
+                                                                  {
+                                                                    "activated": true,
+                                                                    "metadata": {
+                                                                      "label": ""
+                                                                    },
+                                                                    "properties": {
+                                                                      "op1": {
+                                                                        "type": "boolean",
+                                                                        "value": "true"
+                                                                      },
+                                                                      "op2": {
+                                                                        "type": "boolean",
+                                                                        "value": "true"
+                                                                      },
+                                                                      "op": "=="
+                                                                    },
+                                                                    "children": [
+                                                                      {
+                                                                        "activated": true,
+                                                                        "metadata": {
+                                                                          "label": ""
+                                                                        },
+                                                                        "properties": {
+                                                                          "name": "info",
+                                                                          "inputParams": [
+                                                                            {
+                                                                              "key": "info",
+                                                                              "type": "string",
+                                                                              "value": "Soignez-vous !"
+                                                                            }
+                                                                          ],
+                                                                          "outputParams": []
+                                                                        },
+                                                                        "children": [],
+                                                                        "id": "aa0891e6-a77b-4fed-8f37-7752c2c3646b",
+                                                                        "type": "action"
+                                                                      }
+                                                                    ],
+                                                                    "id": "ec7680af-c58a-45e5-b24b-ee9bf6e74161",
+                                                                    "type": "condition"
+                                                                  },
+                                                                  {
+                                                                    "activated": true,
+                                                                    "metadata": {
+                                                                      "label": ""
+                                                                    },
+                                                                    "properties": {
+                                                                      "name": "info",
+                                                                      "inputParams": [
+                                                                        {
+                                                                          "key": "info",
+                                                                          "type": "string",
+                                                                          "value": "Nous informons le technicien qu'il y a un probleme sur votre installation de chauffage. Il vous recontactera le plus rapidement possible pour le résoudre."
+                                                                        }
+                                                                      ],
+                                                                      "outputParams": []
+                                                                    },
+                                                                    "children": [],
+                                                                    "id": "dd6a9024-e8b0-40fb-9440-87afca606880",
+                                                                    "type": "action"
+                                                                  }
+                                                                ],
+                                                                "id": "02bde67c-1c22-494f-8706-ba6abaf029aa",
+                                                                "type": "priority"
+                                                              }
+                                                            ],
+                                                            "id": "297e05dd-892d-44ac-8c5e-97b0a71abc67",
+                                                            "type": "sequence"
+                                                          }
+                                                        ],
+                                                        "id": "69fab8f6-d9fc-4350-821d-d268e42f1583",
+                                                        "type": "condition"
+                                                      },
+                                                      {
+                                                        "activated": true,
+                                                        "metadata": {
+                                                          "label": ""
+                                                        },
+                                                        "properties": {
+                                                          "name": "",
+                                                          "inputParams": [],
+                                                          "outputParams": []
+                                                        },
+                                                        "children": [],
+                                                        "id": "e3a74399-4db2-4a9e-92db-06428a37f4b8",
+                                                        "type": "action"
+                                                      }
+                                                    ],
+                                                    "id": "7157a0cb-8c44-4eac-8cf3-994f66c385df",
+                                                    "type": "priority"
+                                                  }
+                                                ],
+                                                "id": "9aa9a4d3-fa06-40b8-9a5c-b04f091fc5b2",
+                                                "type": "sequence"
+                                              }
+                                            ],
+                                            "id": "78119517-460d-43fd-b6fe-2612b2df4422",
+                                            "type": "priority"
+                                          }
+                                        ],
+                                        "id": "7ef18415-7517-49cc-bf22-e51b574d00c8",
+                                        "type": "sequence"
+                                      }
+                                    ],
+                                    "id": "f78df27e-0f77-4359-9416-4996bf66cce0",
+                                    "type": "priority"
+                                  }
+                                ],
+                                "id": "29b845eb-90b6-440e-851e-4b90f22f1d1a",
+                                "type": "sequence"
+                              }
+                            ],
+                            "id": "702e45fc-bce4-4240-bece-642d9265b92e",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "info",
+                                  "type": "string",
+                                  "value": "Nous informons le technicien qu'il y a un probleme sur votre installationde chauffage. Il vous recontactera le plus rapidement possible pour le resoudre."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "5aa7b5c8-6f12-4aab-897e-72237022ecb6",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "47c6c30e-b3b9-4667-a363-9c1c9dea5877",
+                        "type": "priority"
+                      }
+                    ],
+                    "id": "171ec622-79b2-4000-8e7f-20eac7d92432",
+                    "type": "sequence"
+                  }
+                ],
+                "id": "63d41170-a27f-4df3-ade6-99d87c87f07d",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "name": "info",
+                  "inputParams": [
+                    {
+                      "key": "info",
+                      "type": "string",
+                      "value": "Ouvrez votre radiateur à fond pour augmenter la puissance de chauffage chez vous."
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "8d6a38bb-d042-434d-b633-f1538c8db56a",
+                "type": "action"
+              }
+            ],
+            "id": "a8a4b2f4-c149-4975-b52c-ace6236bb153",
+            "type": "priority"
           }
         ],
         "id": "ed51d587-18a2-416e-a907-10ae00606208",
