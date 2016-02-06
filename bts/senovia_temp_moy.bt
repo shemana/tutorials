@@ -53,7 +53,7 @@
                         {
                           "key": "question",
                           "type": "string",
-                          "value": "Il semblerait bien que l'installation collective de chauffage rencontre un problème.\\n Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais. En attendant, avez-vous ouvert à fond tous vos radiateurs ?"
+                          "value": "Il semblerait bien que l'installation collective de chauffage rencontre un problème.<br> Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais. En attendant, avez-vous ouvert à fond tous vos radiateurs ?"
                         }
                       ],
                       "outputParams": [
