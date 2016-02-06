@@ -170,7 +170,7 @@
                                 {
                                   "key": "question",
                                   "type": "string",
-                                  "value": "Etes-vous bien habillé ?"
+                                  "value": "Les bouches d'aeration et d ventilation sont-elles obstruées ?"
                                 }
                               ],
                               "outputParams": [
@@ -184,6 +184,80 @@
                             "children": [],
                             "id": "466f5023-3742-4582-b87c-cf97a7cedcba",
                             "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "type": "entityKnowledge",
+                                    "value": "reponse"
+                                  },
+                                  "op2": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op": "=="
+                                },
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {
+                                      "name": "info",
+                                      "inputParams": [
+                                        {
+                                          "key": "message",
+                                          "type": "string",
+                                          "value": "Si vous bouchez vos bouches d'aeration, l'air ne peut se renouveller et l'humidite s'accumule dans votre appartement. En plus d'etre inconfortable, ce n'est pas bon pour votre santé. Nous vous conseillons de deboucher les obstruations et d'aerer votre appartement 1 minutes par jours. "
+                                        }
+                                      ],
+                                      "outputParams": []
+                                    },
+                                    "children": [],
+                                    "id": "e97f4291-e303-43a5-96fb-ac265f4f8459",
+                                    "type": "action"
+                                  }
+                                ],
+                                "id": "747890e1-e549-4529-a402-9d17cc0348e8",
+                                "type": "condition"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Nous informons letechnicien que la ventillation de votre appartement semble dysfonctionner. En attendant son intervention aerez votre logement 10 minutes par jour."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "ca279208-3269-4ede-834f-230f26f510a3",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "2becb75e-db6d-4eef-8956-e3bd5bec0618",
+                            "type": "priority"
                           }
                         ],
                         "id": "d4c2e29e-5546-46dc-8def-a7be5652e16e",
