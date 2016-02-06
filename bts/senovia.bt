@@ -76,7 +76,7 @@
                             "properties": {
                               "behavior": {
                                 "type": "uriPath",
-                                "value": "bts/senovia_temp_moy"
+                                "value": "bts/senovia_temp_moy.bt"
                               },
                               "inputParams": [
                                 {
@@ -119,7 +119,7 @@
                             "properties": {
                               "behavior": {
                                 "type": "uriPath",
-                                "value": "bts/senovia_temp_moy"
+                                "value": "bts/senovia_temp_moy.bt"
                               },
                               "inputParams": [
                                 {
@@ -574,7 +574,7 @@
                 "properties": {
                   "behavior": {
                     "type": "uriPath",
-                    "value": "bts/senovia_temp_moy"
+                    "value": "bts/senovia_temp_moy.bt"
                   },
                   "inputParams": [
                     {
