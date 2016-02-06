@@ -170,61 +170,25 @@
                 "metadata": {
                   "label": ""
                 },
-                "properties": {},
+                "properties": {
+                  "active": "false"
+                },
                 "children": [
                   {
                     "activated": true,
                     "metadata": {
-                      "label": ""
+                      "label": "temperature > 22"
                     },
                     "properties": {
                       "op1": {
                         "type": "behaviorParams",
-                        "value": "true"
+                        "value": "temperature"
                       },
                       "op2": {
-                        "type": "boolean",
-                        "value": "true"
+                        "type": "integer",
+                        "value": "1"
                       },
                       "op": "=="
-                    },
-                    "children": [],
-                    "id": "e40988a8-58fc-4030-a380-38765ccbc203",
-                    "type": "condition"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "name": "ask",
-                      "inputParams": [
-                        {
-                          "key": "question",
-                          "type": "string",
-                          "value": "Il semblerai bien que l'installation collective de cauffage rencontre un probleme. Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais. En attndant, avez-vous ouvert à fond tous vos radiateurs ?"
-                        }
-                      ],
-                      "outputParams": [
-                        {
-                          "key": "reponse",
-                          "type": "entityKnowledge",
-                          "value": "reponse"
-                        }
-                      ]
-                    },
-                    "children": [],
-                    "id": "ab1c92da-9805-4f66-8bf0-cfe4a2fa3cb9",
-                    "type": "action"
-                  },
-                  {
-                    "activated": true,
-                    "metadata": {
-                      "label": ""
-                    },
-                    "properties": {
-                      "active": "false"
                     },
                     "children": [
                       {
@@ -232,17 +196,7 @@
                         "metadata": {
                           "label": ""
                         },
-                        "properties": {
-                          "op1": {
-                            "type": "entityKnowledge",
-                            "value": "reponse"
-                          },
-                          "op2": {
-                            "type": "boolean",
-                            "value": "true"
-                          },
-                          "op": "=="
-                        },
+                        "properties": {},
                         "children": [
                           {
                             "activated": true,
@@ -255,18 +209,159 @@
                                 {
                                   "key": "message",
                                   "type": "string",
-                                  "value": "Super ! Nous vous tiendrons informé des que l'exploitant sera intervenu."
+                                  "value": "Nous vous conseillons de le faire. Nous vous tiendrons informé des que l'exploitant sera intervenu."
                                 }
                               ],
                               "outputParams": []
                             },
                             "children": [],
-                            "id": "5b438783-5060-4825-8534-99f7feabe53a",
+                            "id": "e0c8d5db-427f-4de6-afd2-2b2a19b36d96",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Il semblerai bien que l'installation collective de cauffage rencontre un probleme. Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais. En attndant, avez-vous ouvert à fond tous vos radiateurs ?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "reponse"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "3fde7658-a736-4f79-ae6f-564e7c1f3208",
                             "type": "action"
                           }
                         ],
-                        "id": "0e4bf686-eaff-4804-a921-b640464639cd",
-                        "type": "condition"
+                        "id": "8b30b083-220f-4085-a09e-71e9c143e413",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "ef7e315a-2dac-40f6-9d42-f3ade1a5993c",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "temperature < 20"
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "behaviorParams",
+                        "value": "temperature"
+                      },
+                      "op2": {
+                        "type": "integer",
+                        "value": "-1"
+                      },
+                      "op": "=="
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "message",
+                                  "type": "string",
+                                  "value": "Nous vous conseillons de le faire. Nous vous tiendrons informé des que l'exploitant sera intervenu."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "0ab2c77e-79b8-4a33-b403-45754b7c9a22",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Il semblerai bien que l'installation collective de cauffage rencontre un probleme. Nous avons informé le technicien pour qu'il intervienne dans les meilleurs délais. En attndant, avez-vous ouvert à fond tous vos radiateurs ?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "reponse"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "74858219-73dd-4370-91ce-984a55686075",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "e35af13b-50fb-40ec-a471-d39a4653f4e0",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "c98bf87e-5ebe-489e-b085-65a9a14b2205",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": "Question chaud ou froid ou bien?"
+                    },
+                    "properties": {},
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "ask",
+                          "inputParams": [
+                            {
+                              "key": "question",
+                              "type": "string",
+                              "value": "Avez vous chaud ?"
+                            }
+                          ],
+                          "outputParams": [
+                            {
+                              "key": "reponse",
+                              "type": "entityKnowledge",
+                              "value": "reponse"
+                            }
+                          ]
+                        },
+                        "children": [],
+                        "id": "b98fa047-6501-48dd-85c2-a02a157c684a",
+                        "type": "action"
                       },
                       {
                         "activated": true,
@@ -274,27 +369,119 @@
                           "label": ""
                         },
                         "properties": {
-                          "name": "info",
-                          "inputParams": [
-                            {
-                              "key": "message",
-                              "type": "string",
-                              "value": "Nous vous conseillons de le faire. Nous vous tiendrons informé des que l'exploitant sera intervenu."
-                            }
-                          ],
-                          "outputParams": []
+                          "active": "false"
                         },
-                        "children": [],
-                        "id": "480315a1-4969-4cc2-be51-0a2850c8dd79",
-                        "type": "action"
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": "chaud"
+                            },
+                            "properties": {
+                              "op1": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op2": {
+                                "type": "boolean",
+                                "value": "true"
+                              },
+                              "op": "=="
+                            },
+                            "children": [],
+                            "id": "090c4522-3d37-4dd5-936d-53cc6021e87a",
+                            "type": "condition"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Avez vous froid?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "reponse"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "7d2ce309-f207-4fd0-940a-23c365f3e848",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": "froid"
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op2": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op": "=="
+                                },
+                                "children": [],
+                                "id": "0997b7da-9d05-424c-9f96-a675d5eeec4e",
+                                "type": "condition"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": "ni trop chaud ni trop froid"
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Ok."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "d1d9b59c-55cd-4ab6-9dd4-49f43de83d57",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "19b1570c-a9c6-4788-ae91-68f30435fd4b",
+                            "type": "priority"
+                          }
+                        ],
+                        "id": "15262710-a49b-4973-846b-e9d4a7b1e128",
+                        "type": "priority"
                       }
                     ],
-                    "id": "68764294-fb1a-4212-93e9-fd1cec35988d",
-                    "type": "priority"
+                    "id": "a36494a3-f6e5-4b88-bc54-8ad4d6ee2da3",
+                    "type": "sequence"
                   }
                 ],
-                "id": "8c4a15e8-8bce-4844-996b-19806b7f285f",
-                "type": "sequence"
+                "id": "5699f7c2-efe0-432e-b15d-2ed65b46e5e0",
+                "type": "priority"
               }
             ],
             "id": "33425124-8afb-4825-a32a-327919b289f1",
