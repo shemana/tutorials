@@ -8,7 +8,445 @@
       "label": ""
     },
     "properties": {},
-    "children": [],
+    "children": [
+      {
+        "activated": true,
+        "metadata": {
+          "label": ""
+        },
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "active": "false"
+            },
+            "children": [
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "temperature"
+                  },
+                  "op2": {
+                    "type": "real",
+                    "value": "20"
+                  },
+                  "op": "<"
+                },
+                "children": [],
+                "id": "e9ad388a-84e9-4f7f-81cb-d095fbea2024",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "op1": {
+                    "type": "entityKnowledge",
+                    "value": "temperature"
+                  },
+                  "op2": {
+                    "type": "real",
+                    "value": "22"
+                  },
+                  "op": ">"
+                },
+                "children": [],
+                "id": "d51ef2de-a93d-4e9a-9ed7-85854bba9d0e",
+                "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": "temperature entre 20 et 22 degres"
+                },
+                "properties": {
+                  "active": "false"
+                },
+                "children": [
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "humidite"
+                      },
+                      "op2": {
+                        "type": "real",
+                        "value": "30"
+                      },
+                      "op": "<"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {
+                          "name": "info",
+                          "inputParams": [
+                            {
+                              "key": "message",
+                              "type": "string",
+                              "value": "Vous avez un air trop sec pour etre confortable. Nous vous conseilons d'installer des solutions pour humidifier votre air interieur."
+                            }
+                          ],
+                          "outputParams": []
+                        },
+                        "children": [],
+                        "id": "dcb4a76f-dcb7-4abb-8cb6-78b0e51595be",
+                        "type": "action"
+                      }
+                    ],
+                    "id": "cf64f6cb-39b9-4055-829d-4ead61e58474",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "op1": {
+                        "type": "entityKnowledge",
+                        "value": "humidite"
+                      },
+                      "op2": {
+                        "type": "real",
+                        "value": "70"
+                      },
+                      "op": ">"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "info",
+                              "inputParams": [
+                                {
+                                  "key": "message",
+                                  "type": "string",
+                                  "value": "Nous detectons une forte humidite dans votre logement, cause de votre inconfort."
+                                }
+                              ],
+                              "outputParams": []
+                            },
+                            "children": [],
+                            "id": "425a914b-c788-475e-af31-7f6111676521",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Etes-vous bien habillé ?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "response"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "466f5023-3742-4582-b87c-cf97a7cedcba",
+                            "type": "action"
+                          }
+                        ],
+                        "id": "d4c2e29e-5546-46dc-8def-a7be5652e16e",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "31c33251-213b-4e30-a3fc-656bf6a29dae",
+                    "type": "condition"
+                  },
+                  {
+                    "activated": true,
+                    "metadata": {
+                      "label": ""
+                    },
+                    "properties": {
+                      "active": "false"
+                    },
+                    "children": [
+                      {
+                        "activated": true,
+                        "metadata": {
+                          "label": ""
+                        },
+                        "properties": {},
+                        "children": [
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Etes-vous bien habillé ?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "response"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "e52e6062-eabd-4557-890c-5f4c51f7c16e",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "name": "ask",
+                              "inputParams": [
+                                {
+                                  "key": "question",
+                                  "type": "string",
+                                  "value": "Etes-vous bien habillé ?"
+                                }
+                              ],
+                              "outputParams": [
+                                {
+                                  "key": "reponse",
+                                  "type": "entityKnowledge",
+                                  "value": "response"
+                                }
+                              ]
+                            },
+                            "children": [],
+                            "id": "17d9a372-e1b5-4752-8e90-370ba695bd03",
+                            "type": "action"
+                          },
+                          {
+                            "activated": true,
+                            "metadata": {
+                              "label": ""
+                            },
+                            "properties": {
+                              "active": "false"
+                            },
+                            "children": [
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "op1": {
+                                    "type": "entityKnowledge",
+                                    "value": "reponse"
+                                  },
+                                  "op2": {
+                                    "type": "boolean",
+                                    "value": "true"
+                                  },
+                                  "op": "=="
+                                },
+                                "children": [
+                                  {
+                                    "activated": true,
+                                    "metadata": {
+                                      "label": ""
+                                    },
+                                    "properties": {},
+                                    "children": [
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "name": "ask",
+                                          "inputParams": [
+                                            {
+                                              "key": "question",
+                                              "type": "string",
+                                              "value": "Etes-vous malade ?"
+                                            }
+                                          ],
+                                          "outputParams": [
+                                            {
+                                              "key": "reponse",
+                                              "type": "entityKnowledge",
+                                              "value": "response"
+                                            }
+                                          ]
+                                        },
+                                        "children": [],
+                                        "id": "1f4c1829-60aa-40b4-abd4-9391b05b6433",
+                                        "type": "action"
+                                      },
+                                      {
+                                        "activated": true,
+                                        "metadata": {
+                                          "label": ""
+                                        },
+                                        "properties": {
+                                          "active": "false"
+                                        },
+                                        "children": [
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "op1": {
+                                                "type": "entityKnowledge",
+                                                "value": "reponse"
+                                              },
+                                              "op2": {
+                                                "type": "boolean",
+                                                "value": "true"
+                                              },
+                                              "op": "=="
+                                            },
+                                            "children": [
+                                              {
+                                                "activated": true,
+                                                "metadata": {
+                                                  "label": ""
+                                                },
+                                                "properties": {
+                                                  "name": "info",
+                                                  "inputParams": [
+                                                    {
+                                                      "key": "message",
+                                                      "type": "string",
+                                                      "value": "Soignez vous !"
+                                                    }
+                                                  ],
+                                                  "outputParams": []
+                                                },
+                                                "children": [],
+                                                "id": "63b1780a-1d81-437a-a22f-55a63aa7187a",
+                                                "type": "action"
+                                              }
+                                            ],
+                                            "id": "5e112588-baa8-48c7-a0c0-52268a555188",
+                                            "type": "condition"
+                                          },
+                                          {
+                                            "activated": true,
+                                            "metadata": {
+                                              "label": ""
+                                            },
+                                            "properties": {
+                                              "name": "info",
+                                              "inputParams": [
+                                                {
+                                                  "key": "message",
+                                                  "type": "string",
+                                                  "value": "Nous ne connaissons pas le probleme ."
+                                                }
+                                              ],
+                                              "outputParams": []
+                                            },
+                                            "children": [],
+                                            "id": "eca5f699-d046-4458-9c2f-59afdb2cb08b",
+                                            "type": "action"
+                                          }
+                                        ],
+                                        "id": "1d840193-eab7-4acc-8ce3-7eecfcfb4154",
+                                        "type": "priority"
+                                      }
+                                    ],
+                                    "id": "f9a9a62f-89a7-402d-b11a-fa56ffad6437",
+                                    "type": "sequence"
+                                  }
+                                ],
+                                "id": "62df42a4-4832-46fe-b70b-24503638f919",
+                                "type": "condition"
+                              },
+                              {
+                                "activated": true,
+                                "metadata": {
+                                  "label": ""
+                                },
+                                "properties": {
+                                  "name": "info",
+                                  "inputParams": [
+                                    {
+                                      "key": "message",
+                                      "type": "string",
+                                      "value": "Habillez-vous, vous aller tomber malade ."
+                                    }
+                                  ],
+                                  "outputParams": []
+                                },
+                                "children": [],
+                                "id": "7c56d72a-0c5c-4b42-9230-0ddcec7e5c9a",
+                                "type": "action"
+                              }
+                            ],
+                            "id": "06cce02f-f447-453f-af1f-b123f00a9c16",
+                            "type": "priority"
+                          }
+                        ],
+                        "id": "4d50580f-ae6b-4a3a-a8dc-2d0bf8cd860f",
+                        "type": "sequence"
+                      }
+                    ],
+                    "id": "3fd463b8-e29d-430a-920e-6e2824cf9165",
+                    "type": "priority"
+                  }
+                ],
+                "id": "d9ff079e-0982-4ddd-93fa-783dcc5eed85",
+                "type": "priority"
+              }
+            ],
+            "id": "de5144a4-6076-490a-b88d-3645f6168119",
+            "type": "priority"
+          }
+        ],
+        "id": "0f0c8682-e44f-4781-9df2-a4ac2d9ef4a5",
+        "type": "sequence"
+      }
+    ],
     "id": "6dcd07ea-fc74-4300-a912-a70b0dbec53d"
   }
 ]
