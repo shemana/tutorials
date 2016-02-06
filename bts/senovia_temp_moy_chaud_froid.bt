@@ -89,6 +89,26 @@
                 ],
                 "id": "f32e86cb-17a3-41cf-a172-5129bc1b8de2",
                 "type": "condition"
+              },
+              {
+                "activated": true,
+                "metadata": {
+                  "label": ""
+                },
+                "properties": {
+                  "name": "info",
+                  "inputParams": [
+                    {
+                      "key": "info",
+                      "type": "string",
+                      "value": "Coupez vos radiateurs pour réduire la puissance de chauffage chez vous."
+                    }
+                  ],
+                  "outputParams": []
+                },
+                "children": [],
+                "id": "3e3a20b7-04d5-4977-b2ab-314fe512997e",
+                "type": "action"
               }
             ],
             "id": "ffffa624-c663-4055-a4bf-0024679c25cd",
