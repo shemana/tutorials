@@ -1,0 +1,10 @@
+{
+  "owner": "shemana",
+  "name": "tutorials",
+  "version": "master",
+  "appId": "sOENibcq5ZjEk8uMZk9S",
+  "appSecret": "pssvDmr0dLfKnrAvumSr8pW2zItrx5Te72wP8Yya",
+  "httpApiUrl": "https://api.craft.ai/v1",
+  "wsApiUrl": "wss://api.craft.ai/v1",
+  "hubApiUrl": "https://api.craft.ai/v1"
+}
