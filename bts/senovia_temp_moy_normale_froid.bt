@@ -22,10 +22,10 @@
               "label": ""
             },
             "properties": {
-              "name": "info",
+              "name": "message",
               "inputParams": [
                 {
-                  "key": "info",
+                  "key": "message",
                   "type": "string",
                   "value": "A premiere vue, cet inconfort n'est ressenti que dans votre appartement. Essayons de regler le probleme ensemble."
                 }
@@ -517,10 +517,10 @@
                   "label": ""
                 },
                 "properties": {
-                  "name": "info",
+                  "name": "message",
                   "inputParams": [
                     {
-                      "key": "info",
+                      "key": "message",
                       "type": "string",
                       "value": "Ouvrez votre radiateur à fond pour augmenter la puissance de chauffage chez vous."
                     }
