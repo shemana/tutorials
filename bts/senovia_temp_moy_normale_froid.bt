@@ -22,7 +22,7 @@
               "label": ""
             },
             "properties": {
-              "name": "message",
+              "name": "info",
               "inputParams": [
                 {
                   "key": "message",
