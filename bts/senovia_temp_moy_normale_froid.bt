@@ -177,7 +177,7 @@
                                               "name": "info",
                                               "inputParams": [
                                                 {
-                                                  "key": "info",
+                                                  "key": "message",
                                                   "type": "string",
                                                   "value": "Si vous bouchez vos bouches d'aeration, l'air ne peut se rnouveler et l'humidité s'accumule dans votre appartement. En plus d'etre inconfortable, ce n'est pas bon pour votre santé. Nous vous conseillons de deboucher les obstruations et d'aerer votre appartement 10 minutes par jours."
                                                 }
@@ -254,7 +254,7 @@
                                                       "name": "info",
                                                       "inputParams": [
                                                         {
-                                                          "key": "info",
+                                                          "key": "message",
                                                           "type": "string",
                                                           "value": "Nous informons le technicien qu'il y a un problème sur votre installation de chauffage. Il vous recontactera le plus rapidement possible pour le résoudre."
                                                         }
@@ -384,7 +384,7 @@
                                                                           "name": "info",
                                                                           "inputParams": [
                                                                             {
-                                                                              "key": "info",
+                                                                              "key": "message",
                                                                               "type": "string",
                                                                               "value": "Soignez-vous !"
                                                                             }
@@ -408,7 +408,7 @@
                                                                       "name": "info",
                                                                       "inputParams": [
                                                                         {
-                                                                          "key": "info",
+                                                                          "key": "message",
                                                                           "type": "string",
                                                                           "value": "Nous informons le technicien qu'il y a un probleme sur votre installation de chauffage. Il vous recontactera le plus rapidement possible pour le résoudre."
                                                                         }
@@ -440,7 +440,7 @@
                                                           "name": "info",
                                                           "inputParams": [
                                                             {
-                                                              "key": "info",
+                                                              "key": "message",
                                                               "type": "string",
                                                               "value": "Habillez-vous correctement car la temperature est tres basse en ce moment et vous risquez de tomber malade."
                                                             }
@@ -488,7 +488,7 @@
                               "name": "info",
                               "inputParams": [
                                 {
-                                  "key": "info",
+                                  "key": "message",
                                   "type": "string",
                                   "value": "Nous informons le technicien qu'il y a un probleme sur votre installationde chauffage. Il vous recontactera le plus rapidement possible pour le resoudre."
                                 }
@@ -517,7 +517,7 @@
                   "label": ""
                 },
                 "properties": {
-                  "name": "message",
+                  "name": "info",
                   "inputParams": [
                     {
                       "key": "message",
